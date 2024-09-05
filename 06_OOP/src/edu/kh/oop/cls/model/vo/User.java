@@ -42,8 +42,6 @@ public class User {
 		this.userId = userId;
 		this.userPw = userPw;
 		// 필드     = 매개변수
-		
-		
 	}
 	
 	
