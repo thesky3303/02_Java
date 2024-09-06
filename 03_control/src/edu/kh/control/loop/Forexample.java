@@ -123,22 +123,7 @@ public class ForExample { // 기능제공용 클래스
 		 * 잘못 입력하셨습니다.
 		 * 
 		 * */
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("단 입력 : ");
-		int dan = sc.nextInt();
-		
-		if( dan >= 2 && dan <= 9 ) { // 2~9 사이일때
-			
-			for(int i = 1; i <= 9; i++) {
-				System.out.printf("%d X %d = %d\n", dan, i, dan * i);
-			}
-			
-			
-		} else { // 범위 밖일때
-			System.out.println("잘못 입력하셨습니다.");
-		}
-		
+
 		
 	}
 	
