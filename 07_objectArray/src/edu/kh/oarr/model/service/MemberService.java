@@ -51,8 +51,8 @@ public class MemberService {
 			switch(menuNum) {
 			case 1 : System.out.println( signUp() );  break;
 			case 2 : System.out.println( login() ); break;
-			case 3 : /*조회*/ break;
-			case 4 : /*수정*/ break;
+			case 3 : selectMember();  break;
+			case 4 : System.out.println( fod() ); break;
 			case 5 : searchRegion(); break;
 			case 0 : System.out.println("프로그램 종료..."); break;
 			default : System.out.println("잘못 입력하셨습니다. 다시 입력하세요!");
@@ -232,7 +232,7 @@ public class MemberService {
 	
 	
 	// 회원 정보 조회 메서드
-	//public String selectMember() {
+	public void selectMember() {
 		
 		// 1) 로그인 여부 확인
 		// 2) 로그인이 되어있는 경우
@@ -244,10 +244,24 @@ public class MemberService {
 		// 나이 : 20
 		// 지역 : 서울
 		
-	//}
+		if (loginMember == null) {
+			System.out.println("로그인부터 시도");
+		}
+		else {
+		System.out.println("이름 :"+ loginMember.getMemberName());
+		System.out.println("아이디 :"+ loginMember.getMemberId());
+		System.out.println("나이 :"+ loginMember.getMemberAge());
+		System.out.println("지역 :"+ loginMember.getRegion());
+		}
+		
+		
+	}
+	
+	
+	
 	
 	// 회원 정보 수정 메서드
-	//public int updateMember() {
+	public int updateMember() {
 		
 		// 1) 로그인 여부 판별
 		// -> 로그인이 되어있지 않으면 -1 반환
@@ -266,14 +280,51 @@ public class MemberService {
 		// 5) 비밀번호가 다른 경우 0 반환
 		
 		
+		if (loginMember == null) {
+			return -1;
+		}
 		
+		System.out.print("이름 : ");
+		String memberName = sc.next();
+	
+		System.out.print("나이 : ");
+		int memberAge = sc.nextInt();
+	
+		System.out.print("지역 : ");
+		String region = sc.next();
 		
-	//}
+		System.out.print("비밀번호 : ");
+		String memberPw = sc.next();
+		
+		if (loginMember.getMemberPw().equals(memberPw) ) {
+			loginMember.setMemberName(memberName);
+			loginMember.setMemberAge(memberAge);
+			loginMember.setRegion(region);
+			return 1;
+		} else {
+			return 0;
+		}
+			
+	}
 	
 	
 	
 	
 	
+	public String fod() {
+		System.out.println("\n========회원 정보 수정=========");	
+		
+		int index2 = updateMember(); 
+		
+		if(index2 == -1) { 
+			return "회원가입 불가능합니다(로그인부터)";
+		}
+		if(index2 == 1) { 
+			return "회원정보가 변경되었습니다.";
+		} else {
+			return "변경불가(비밀번호 다름)";
+		}
+	}
 	
 	
 	
