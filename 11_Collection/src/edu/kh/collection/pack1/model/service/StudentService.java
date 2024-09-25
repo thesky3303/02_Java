@@ -29,7 +29,7 @@ public class StudentService {
 	// private List<Object> testList = new ArrayList<Object>();
 
 	// 학생 정보를 저장할 List 생성
-	// private List<Student> studentList = new ArrayList<Student>(); // 검색(조회) 효율적
+	//private List<Student> studentList = new ArrayList<Student>(); // 검색(조회) 효율적
 	private List<Student> studentList = new LinkedList<Student>(); // 추가, 수정, 삭제에
 	// 효율적
 	// 부모타입(List) 참조변수(testList) = 자식객체(ArrayList) 주소 대입
@@ -52,17 +52,23 @@ public class StudentService {
 	/*
 	 * public void ex() { // List 테스트용 예제
 	 * 
-	 * // List.add(Object e) : 리스트에 객체를 추가 // * 매개변수 타입이 Object == 모든 객체 매개변수로 전달할 수
-	 * 있음 testList.add(new Student("홍길동", 25, "서울시 중구", 'M', 90));
-	 * testList.add("문자열"); testList.add(sc); testList.add(new Object());
+	 * // List.add(Object e) : 리스트에 객체를 추가 
+	 * // * 매개변수 타입이 Object == 모든 객체 매개변수로 전달할 수 있음 
+	 * 
+	 * testList.add(new Student("홍길동", 25, "서울시 중구", 'M', 90));
+	 * testList.add("문자열"); 
+	 * testList.add(sc); 
+	 * testList.add(new Object());
 	 * 
 	 * // 컬렉션 특징: 여러 타입의 데이터를 저장할 수 있다.
 	 * 
 	 * // Object List.get(index) : 리스트에서 index번째 인덱스에 있는 객체를 반환 // 반환형이 Object == 모든
 	 * 객체를 반환할 수 있다
 	 * 
-	 * System.out.println( testList.get(0) ); System.out.println( testList.get(1) );
-	 * System.out.println( testList.get(2) ); System.out.println( testList.get(3) );
+	 * System.out.println( testList.get(0) ); 
+	 * System.out.println( testList.get(1) );
+	 * System.out.println( testList.get(2) ); 
+	 * System.out.println( testList.get(3) );
 	 * 
 	 * 
 	 * // testList에서 꺼내온 인덱스 요소가 Student 혹은 상속관계인지 검사 // 만약 Student 라면 이름을 꺼내오고 싶다
