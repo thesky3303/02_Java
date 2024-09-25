@@ -1,0 +1,52 @@
+package com.hw1.model.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Friend {
+	
+	private String name;
+
+	
+	ArrayList<String> FriendList = new ArrayList<String>();    
+	
+	public Friend() {
+		FriendList.add("짱구");
+		FriendList.add("철수");
+		FriendList.add("유리");
+		FriendList.add("훈이");
+		FriendList.add("맹구");
+		
+	}
+
+	public Friend(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Friend(String name, List<Friend> friendList) {
+		super();
+		this.name = name;
+		FriendList = friendList;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+
+	public void pickLeader() {
+		System.out.println(FriendList.get(0));
+		
+
+		
+		System.out.println(((Friend) FriendList).getName() );
+	
+	}
+	
+	
+}

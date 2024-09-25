@@ -1,0 +1,8 @@
+package edu.kh.collection.pack2.run;
+
+public class SetRun {
+	public static void main(String[] args) {
+		
+	}
+
+}

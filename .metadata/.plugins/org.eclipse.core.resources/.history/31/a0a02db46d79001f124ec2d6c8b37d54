@@ -1,0 +1,13 @@
+package edu.kh.collection.pack3.model.dto;
+
+public class Member {
+
+	private String id;
+	private String pw;
+	private int age;
+	
+	public Member() {}
+
+
+	
+}

@@ -1,0 +1,11 @@
+package com.hw2.model.dto;
+
+public class Animal {
+
+	protected String name() {
+		
+	}
+	
+	public Animal() {}
+
+}

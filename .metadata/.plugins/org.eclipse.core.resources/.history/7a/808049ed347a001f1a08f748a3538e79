@@ -1,0 +1,13 @@
+package com.hw3.model.service;
+
+import java.util.Objects;
+
+public class mate {
+
+	private String mate;
+	
+	public mate() {
+		super();
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.hw2.model.dto;
+
+public class Tiger {
+
+	public Tiger() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

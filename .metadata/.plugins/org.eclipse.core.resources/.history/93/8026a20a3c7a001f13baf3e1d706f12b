@@ -1,0 +1,10 @@
+package com.hw3.model.service;
+
+public class mate {
+
+	public Bbject mate;
+	public mate() {}
+	
+	
+
+}

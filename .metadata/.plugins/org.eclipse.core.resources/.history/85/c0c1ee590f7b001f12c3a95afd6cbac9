@@ -1,0 +1,9 @@
+package com.hw3.model.dto;
+
+public class Book {
+
+	public Book() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

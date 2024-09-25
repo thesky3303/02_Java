@@ -1,0 +1,9 @@
+package edu.kh.collection.pack3.run;
+
+public class MapRun {
+
+public static void main(String[] args) {
+	
+}
+
+}

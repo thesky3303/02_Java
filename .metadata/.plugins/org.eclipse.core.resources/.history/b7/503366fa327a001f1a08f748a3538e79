@@ -1,0 +1,50 @@
+package com.hw3.model.service;
+
+import java.util.Objects;
+
+public class mate {
+
+	private String mate;
+
+	public mate() {
+		super();
+	}
+
+	public mate(String mate) {
+		super();
+		this.mate = mate;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(mate);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		mate other = (mate) obj;
+		return Objects.equals(mate, other.mate);
+	}
+
+	public String getMate() {
+		return mate;
+	}
+
+	public void setMate(String mate) {
+		this.mate = mate;
+	}
+
+	@Override
+	public String toString() {
+		return "재료=" + mate;
+	}
+	
+	
+
+}

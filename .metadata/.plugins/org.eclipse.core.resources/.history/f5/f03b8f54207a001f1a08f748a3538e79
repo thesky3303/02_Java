@@ -1,0 +1,7 @@
+package com.hw3.model.service;
+
+public class mate {
+
+	priavte String mate;
+
+}

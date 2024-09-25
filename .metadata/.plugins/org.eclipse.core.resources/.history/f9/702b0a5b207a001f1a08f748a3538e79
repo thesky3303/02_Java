@@ -1,0 +1,18 @@
+package com.hw3.model.service;
+
+public class mate {
+
+	private String mate;
+
+	public mate() {
+		super();
+	}
+
+	public mate(String mate) {
+		super();
+		this.mate = mate;
+	}
+	
+	
+
+}

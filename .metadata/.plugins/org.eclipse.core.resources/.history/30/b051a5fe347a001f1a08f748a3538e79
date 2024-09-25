@@ -1,0 +1,29 @@
+package com.hw3.model.service;
+
+public class mate {
+
+	private String mate;
+	
+	public mate() {
+		super();
+	}
+
+	public String getMate() {
+		return mate;
+	}
+
+	public void setMate(String mate) {
+		this.mate = mate;
+	}
+
+	public mate(String mate) {
+		super();
+		this.mate = mate;
+	}
+
+	@Override
+	public String toString() {
+		return mate
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.hw2.model.dto;
+
+public abstract class Tiger implements Comparable<Animal>{
+
+	public Tiger() {
+		super();
+	}
+
+	public void sound() {
+		System.out.println("어흥하며 포효합니다.");
+	}
+	
+	
+
+}

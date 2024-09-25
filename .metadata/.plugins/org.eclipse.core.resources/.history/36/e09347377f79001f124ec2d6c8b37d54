@@ -1,0 +1,6 @@
+package com.hw2.model.dto;
+
+public Monkey extends Animal{
+
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;edu.kh.oarr.run.MemberRUn.java&apos; to &apos;MemberRun.java&apos;&#x0D;&#x0A;- Original project: &apos;07_objectArray&apos;&#x0D;&#x0A;- Original element: &apos;edu.kh.oarr.run.MemberRUn.java&apos;&#x0D;&#x0A;- Renamed element: &apos;edu.kh.oarr.run.MemberRun.java&apos;" description="Rename compilation unit &apos;MemberRUn.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;edu.kh.oarr.run{MemberRUn.java" name="MemberRun.java" references="false" stamp="1725864561648" version="1.0"/>
+</session>

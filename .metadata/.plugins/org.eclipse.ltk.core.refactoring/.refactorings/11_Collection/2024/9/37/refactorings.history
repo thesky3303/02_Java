@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;edu.kh.collection.pack1.model.service.StrudentService.java&apos; to &apos;StudentService.java&apos;&#x0D;&#x0A;- Original project: &apos;11_Collection&apos;&#x0D;&#x0A;- Original element: &apos;edu.kh.collection.pack1.model.service.StrudentService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;edu.kh.collection.pack1.model.service.StudentService.java&apos;" description="Rename compilation unit &apos;StrudentService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;edu.kh.collection.pack1.model.service{StrudentService.java" name="StudentService.java" references="false" stamp="1726193808826" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+package com.hw3.run;
+
+import com.hw3.model.service.ToyFactory;
+
+public class Run {
+
+private static ToyFactory ToyFactory;
+
+public static void main(String[] args) {
+	ToyFactory = new ToyFactory();
+	ToyFactory.ex();
+}
+
+}
