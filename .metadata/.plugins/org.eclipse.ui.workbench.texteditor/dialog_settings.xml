@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="for"/>
+		<item key="selection" value="Name"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="name"/>
+			<item value="targ"/>
+			<item value="tar"/>
+			<item value="ran"/>
+			<item value="out"/>
+			<item value="ut"/>
+			<item value="rand"/>
+			<item value="random"/>
+			<item value="cre"/>
+			<item value="mkd"/>
+			<item value="length"/>
 			<item value="for"/>
+			<item value="조회"/>
 			<item value="std"/>
 			<item value="dis"/>
-			<item value="TestService"/>
-			<item value="Student"/>
-			<item value="age"/>
-			<item value="다향"/>
-			<item value="Employee"/>
-			<item value="생성"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Service"/>
