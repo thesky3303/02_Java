@@ -1,0 +1,81 @@
+package edu.kh.network.client.model.service;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class ClientService {
+	
+	public void clientStart() {
+		// 1) 서버의 IP주소와 서버가 정한 포트번호를 매개변수로 하여
+		// 클라이언트용 소켓 객체 생성
+		
+		// ex) 서버 Ip 주소 : 198.50.212.22
+		// String serverIP ="198.50.212.22"; 
+		// 다른컴퓨터가 서버일때 그 컴퓨터의 IP주소 작성하면 됩니다!
+		
+		//String serverIP = InetAddress.getLocalHost().getHostAddress();      // ********* 시험 나옴 **********
+		// 현재 컴퓨터의 로컬 IP 주소를 얻어오는 방법
+		
+		String serverIP = "127.0.0.1";
+		// 2) loop back IP(현재 컴퓨터를 나타내는 IP)
+		
+		int port = 8500; 
+		
+		Socket clientSocket = null;
+		
+		InputStream is = null;
+		OutputStream os = null;
+		
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		try {
+			System.out.println("[Client]");
+			
+			clientSocket = new Socket(serverIP, port);
+			// UnknownHostException : IP가 잘못되었을 때 발상해는 예외
+			
+			
+			// 2) 서버와의 입출력 스트림 오픈
+			// 3) 보조 스트림을 통해 성능 개선
+			// 4) 스트림을 통해 읽고 쓰기
+			
+		} catch (UnknownHostException e) {
+			System.out.println("잘못된 IP 주소입니다.");
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		} finally {
+			// 5) 통신 종료
+			
+			try {
+				// 스트림/소켓 닫기                     ************** 시험 나옴 ***********
+				
+				if(br != null) br.close();
+				if(pw != null) pw.close();
+				
+				if(clientSocket != null) clientSocket.close();
+				
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+	}
+
+}

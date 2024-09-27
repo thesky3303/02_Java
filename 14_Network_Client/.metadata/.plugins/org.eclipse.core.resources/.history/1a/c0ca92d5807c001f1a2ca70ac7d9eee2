@@ -1,0 +1,8 @@
+package edu.kh.network.client.run;
+
+public class ClientRun {
+	public static void main(String[] args) {
+		new ClientService().clientStart();
+	}
+
+}
