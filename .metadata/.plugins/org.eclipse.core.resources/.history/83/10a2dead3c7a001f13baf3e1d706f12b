@@ -1,9 +1,0 @@
-package com.hw3.run;
-
-public class Person {
-
-	public Person() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

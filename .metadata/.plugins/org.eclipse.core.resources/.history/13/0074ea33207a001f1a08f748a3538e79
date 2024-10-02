@@ -1,9 +1,0 @@
-package com.hw3.model.service;
-
-public class mate {
-
-	public mate() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

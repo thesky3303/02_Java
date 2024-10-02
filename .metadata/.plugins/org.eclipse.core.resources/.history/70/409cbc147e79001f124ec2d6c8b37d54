@@ -1,9 +1,0 @@
-package com.hw2.model.dto;
-
-public class run {
-
-	public run() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

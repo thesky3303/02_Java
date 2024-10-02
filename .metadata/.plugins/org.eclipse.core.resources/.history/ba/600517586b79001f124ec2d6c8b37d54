@@ -1,9 +1,0 @@
-package edu.kh.collection.pack3.run;
-
-public class MapRun {
-
-	public MapRun() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

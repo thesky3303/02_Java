@@ -1,9 +1,0 @@
-package com.hw3.run;
-
-public class Ex09_03_ArrayList {
-
-	public Ex09_03_ArrayList() {
-		// TODO Auto-generated constructor stub
-	}
-
-}
