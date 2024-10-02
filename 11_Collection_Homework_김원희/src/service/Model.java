@@ -98,8 +98,8 @@ public class Model {
 
 	@Override
 	public String toString() {
-		return "Model [action=" + action + ", know=" + know + ", Fatigue=" + Fatigue + ", feel=" + feel
-				+ ", explanation=" + explanation + "]";
+		return action + "\n   지식증감수치 = " + know + ", 건강증감수치 = " + Fatigue + ", 행복증감수치 = " + feel
+				+ "\n   행동설명문구 = " + explanation+"\n";
 	}
 	
 

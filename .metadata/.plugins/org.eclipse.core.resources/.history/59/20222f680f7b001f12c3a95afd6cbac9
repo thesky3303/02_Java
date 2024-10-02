@@ -1,9 +1,0 @@
-package com.hw3.model.service;
-
-public class BookService {
-
-	public BookService() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Service {
+	
 
 	private List<Model> Action = new ArrayList<Model>();
 	
@@ -12,20 +13,20 @@ public class Service {
 		
 		//순서명 : 행동명, 지식증감수치,  건강증감수치, 행복증감수치, 행동설명
 		
-		Action.add(new Model("먹기",0,0,30," 은/는 먹기를 선택하여 기분만 매우 좋아졌다"));   
-		Action.add(new Model("휴식",0,25,0," 은/는 휴식하여 건강상태만 좋아졌다"));
-		Action.add(new Model("잠자기",0,30,30," 은/는 잠자기를 선택하여 기분과 건강상태가 매우 좋아졌다"));
+		Action.add(new Model("먹기",0,0,30,"행복도가 매우 좋아졌다"));   
+		Action.add(new Model("휴식",0,25,0,"건강상태가 좋아졌다"));
+		Action.add(new Model("잠자기",0,30,30,"행복도와 건강상태가 매우 좋아졌다"));
 		
-		Action.add(new Model("잠깐 놀기",-5,-5,5," 은/는 잠깐 놀아서 기분이 조금 좋아졌다"));
-		Action.add(new Model("놀기",-10,-10,10," 은/는 놀았기 때문에 성취도가 낮아졌다"));
-		Action.add(new Model("격하게 놀기",-20,-20,20,"은/는 격하게 놀아서 성취도가 매우 낮아졌다"));
+		Action.add(new Model("잠깐 놀기",-5,-5,5,"잠깐 놀아서 기분이 조금 좋아졌다"));
+		Action.add(new Model("놀기",-10,-10,10,"놀았기 때문에 성취도가 낮아졌다"));
+		Action.add(new Model("격하게 놀기",-20,-20,20,"격하게 놀아서 성취도가 매우 낮아졌다"));
 		
-		Action.add(new Model("잠깐 공부하기",5,-5,-5," 은/는 잠깐 공부하는건 안하는게 나은거 같다"));   
-		Action.add(new Model("공부하기",10,-10,-10," 은/는 공부를 하여 지식이 늘어났다."));
-		Action.add(new Model("격하게 공부하기",30,-20,-20," 은/는 집중하여 공부를 하였다"));
-		Action.add(new Model("카페에서 공부하기",5,0,0," 은/는 카페에서 공부하여 지식이 조금 늘었다"));
-		Action.add(new Model("학원에서 공부하기",20,0,0," 은/는 학원에서 지식이 많이 늘었다"));
-		Action.add(new Model("집에서 공부하기",5,0,0," 은/는 집에서 지식이 조금 늘었다"));
+		Action.add(new Model("잠깐 공부하기",5,-5,-5,"잠깐 공부하여 지식이 조금 늘었다."));   
+		Action.add(new Model("공부하기",10,-10,-10,"공부를 하여 지식이 늘어났다."));
+		Action.add(new Model("격하게 공부하기",30,-20,-20,"집중하여 공부를 하였다"));
+		Action.add(new Model("카페에서 공부하기",5,0,0,"카페에서 공부하여 지식이 조금 늘었다"));
+		Action.add(new Model("학원에서 공부하기",20,0,0,"학원에서 공부하여 지식이 많이 늘었다"));
+		Action.add(new Model("집에서 공부하기",5,0,0,"집에서 공부하여 지식이 조금 늘었다"));
 		
 	}
 	
@@ -36,7 +37,7 @@ public class Service {
 	public void displaymenu() {
 		int menuNum = 0;
 		do {
-		System.out.println("-- 수강몬 공부시키기 --");
+		System.out.println("---- 수강몬 공부시키기 ----\n");
 		System.out.println("1. 자동 실행 해보기");
 		System.out.println("2. 전체 행동표 조회 ");
 		System.out.println("3. 행동 추가 하기 ");
@@ -59,8 +60,7 @@ public class Service {
 			}
 
 		} catch (Exception e) {
-			System.out.println("알맞은 입력을 해라...(경고)..");
-			e.printStackTrace();
+			System.out.println("\n입력을 확인 하세요(잘못입력)\n");
 			sc.nextLine(); 
 			menuNum = -1;
 		}
@@ -70,7 +70,10 @@ public class Service {
 	}
 
 	public void method1() throws Exception{
-		System.out.print("\n실행횟수 : ");
+		System.out.print("\n당신이 성장시킬 수강몬의 이름 : ");
+		String name = sc.next();          // 이름를 받을 스캐너
+		
+		System.out.print("실행횟수 : ");
 		int count = sc.nextInt();          // 반복횟수를 받을 스캐너
 
 		int random = 0;           // 성취도 보조수단(다중결과)   
@@ -91,8 +94,8 @@ public class Service {
 		int h2 = 0;                     // 출력수단(정수)
 		
 		
-		String name = "수강몬";			// 이름
 		String exp = null;              // 행동 설명용
+		String action = null;			// 행동명
 
 		String result = null;         // 결과용 1
 		String result2 = null;         // 결과용 2
@@ -120,6 +123,7 @@ public class Service {
 			
 			exp = Action.get(random).getExplanation(); // 설명  랜덤 변환된거 받아오기
 			
+			action = Action.get(random).getAction();
 			
 			if(knowledge > 131) {
 				k1 = "뛰어남";
@@ -191,8 +195,8 @@ public class Service {
 			}
 			
 			System.out.println("\n  " + name + "의 상태");
-			System.out.println("┌  " + name + exp);
-			
+			System.out.printf("┌  %s 은/는 %s 를/을 선택 !!\n",name,action);
+			System.out.println("│  "+exp);
 			System.out.printf("└  %d일째  건강상태 : %s  학업성취도 : %s  행복도 : %s \n\n",days,f1,k1,h1);
 		}
 		
@@ -223,44 +227,253 @@ public class Service {
 
 		else if	( knowledge <= 10) 
 		{ result = "폐급 수강몬";
-		System.out.println("재수강 추천!!!");}
+		System.out.println("재수강 고!!!");}
 		
-		else {result="귀신 수강몬";}
+		else {result="귀신 수강몬 그 값이 왜 나옴?;;";}
 		
 		if ( happy > 70 && happy > knowledge) {
-			result2 =  "행복하지만 멍청한 ";
+			result2 =  "행복하지만 공부를 안한 ";
 		} else if (fatigue > 70 && fatigue > knowledge) {
-			result2= "건강하지만 멍청한 ";
+			result2= "건강하지만 공부를 안한 ";
 		}
 		
-			
-			
-			
-			
 		else {result2="";}
- 		
+
+		System.out.println("당신이 키운 " + name+" 은(는) " + result2+ result + "!!!\n");
 		
-		
-		System.out.println("당신이 키운 " + name+"은(는) " + result2+ result + "!!!\n");
-		
+		System.out.println("==================================================================================");
+		System.out.println("1번 실행종료====================================================================");
+		System.out.println("==================================================================================\n");
 	}
 	
 	public void method2() throws Exception{
-	int max2 = Action.size();
 		
-		int random = (int)(Math.random() * max2); // 0 ~ 리스트의 마지막인데스번호
+		System.out.println();
 		
-		System.out.println( Action.get(random).getAction() );
+		System.out.println("---- 수강몬 행동표 조회 ----\n");
+		
+		int i = 0;
+		
+		for(Model find : Action) {
+			i++;
+			System.out.println(i +". "+ find);
+		}
+		
+		System.out.println("==================================================================================");
+		System.out.println("============ 2번 실행종료 ========================================================");
+		System.out.println("==================================================================================\n");
+		
 	}
 	
+	
 	public void method3() throws Exception{
+		
+		
+		System.out.println("---- 수강몬 행동 추가하기 ----\n");
+		
+		System.out.println("제작의도는 행동명 중복을 허용하여 경우의수를 늘리는것 입니다");
+		System.out.println("(같은 행동이라도 수치를 다르게 하길 원함)\n");
+		
+		System.out.print("중복을 허용하여 추가 하시겠습니까? (Y/N)");
+		String yn = sc.next();
+		String name = null;
+		if(yn.equalsIgnoreCase("Y")) {
+			System.out.print("\n행동명 : ");
+			name = sc.next();
+			sc.nextLine(); 
+			
+			System.out.print("지식증감수치 : ");
+			int know = sc.nextInt();
+			
+			System.out.print("건강증감수치 : ");
+			int Fatigue = sc.nextInt();
+			
+			System.out.print("건강증감수치 : ");
+			int feel = sc.nextInt();
+			sc.nextLine(); 
+			
+			System.out.print("행동설명문구 : ");
+			String explanation = sc.next();
+			
+			Model newModel = new Model(name, know, Fatigue, feel, explanation);
+			
+			Action.add(newModel);
+			
+			System.out.println("\n행동명 : '" + name + "' 이(가) 정상 추가 되었습니다.");
+			
+		} else if(yn.equalsIgnoreCase("n")){
+			System.out.print("\n추가할 행동명 : ");
+			name = sc.next();
+			
+			int check = 0;
+			for(Model find : Action) {
+				if(find.getAction().equals(name)) {
+					check =1;
+				}
+				else if(find.getAction() != name){
+					check =2;
+				}
+			}
+			if(check==1) {
+				System.out.println("\n행동명 : "+name + " 는(은) 행동명이 중복됩니다. 삭제후 추가 하세요");
+			} else if (check==2)
+			{
+				System.out.println("\n행동명 : " + name + " 는(은) 추가 가능 상태 입니다.\n");
+				System.out.print("지식증감수치 : ");
+				int know = sc.nextInt();
+				
+				System.out.print("건강증감수치 : ");
+				int Fatigue = sc.nextInt();
+				
+				System.out.print("건강증감수치 : ");
+				int feel = sc.nextInt();
+				sc.nextLine(); 
+				
+				System.out.print("행동설명문구 : ");
+				String explanation = sc.next();
+				
+				Model newModel = new Model(name, know, Fatigue, feel, explanation);
+				
+				Action.add(newModel);
+				
+				System.out.println("\n행동명 : '" + name + "' 이 정상 추가 되었습니다.");
+			}
+		}
+		
+		
+		else {
+			System.out.println("\n입력을 확인하세요");
+		}
+		
+		System.out.println("\n==================================================================================");
+		System.out.println("========================== 3번 실행종료 ==========================================");
+		System.out.println("==================================================================================\n");
+		
 	}
 	
 	public void method4() throws Exception{
+		
+		
+		
+		System.out.println("---- 수강몬 행동 수정하기 ----\n");
+		int i = 0;
+		
+		for(Model find : Action) {
+			i++;
+			System.out.println(i +". "+ find);
+		}
+		
+		System.out.println("위 목록표를 확인한뒤");
+		System.out.print("수정을 원하는 행동 번호를 입력하세요 : ");
+		int y = sc.nextInt(); 
+	      
+				if(Action.get(y) != null ) {
+					System.out.println("\n행동번호 "+y+". "+Action.get(y-1).getAction()+" 고른상태");
+					
+					
+					System.out.println("\n1. 행동명");
+					System.out.println("2. 지식증감수치");
+					System.out.println("3. 건강증감수치");
+					System.out.println("4. 행복증감수치");
+					System.out.println("5. 행동 설명 문구");
+					System.out.println("0. 수정 종료");
+					
+					
+					System.out.print("\n어떤 정보를 수정하시겠습니까? 입력 : ");
+					
+		
+					int editMenu=sc.nextInt();
+					
+					switch(editMenu) {
+					case 1 : 
+						System.out.println("\n===행동명 수정===");
+						System.out.print("\n수정할 행동명을 입력하세요 : ");
+						String action = sc.next();
+						
+						
+						
+						System.out.println(y+". " + Action.get(y-1).getAction()+" 에서 '"+action+"' (으)로 변경되었다.");
+						Action.get(y-1).setAction(action);
+						break;
+					case 2 :
+						System.out.println("\n===지식증감수치 수정===");
+						System.out.print("\n수정할 수치를 입력하세요(숫자만 입력) : ");
+						int know = sc.nextInt();
+						System.out.println("\n"+y+". " + Action.get(y-1).getAction() + " 의 '" + Action.get(y-1).getKnow()+"' 에서 '"+know+"' (으)로 변경되었다.");
+						Action.get(y-1).setKnow(know);
+						break;
+						
+					case 3 :
+						System.out.println("\n===건강증감수치 수정===");
+						System.out.print("\n수정할 수치를 입력하세요(숫자만 입력) : ");
+						int Fatigue = sc.nextInt();
+						System.out.println("\n"+y+". " + Action.get(y-1).getAction() + " 의 '" + Action.get(y-1).getFatigue()+"' 에서 '"+Fatigue+"' (으)로 변경되었다.");
+						Action.get(y-1).setFatigue(Fatigue);
+						break;
+						
+					case 4 :
+						System.out.println("\n===행복증감수치 수정===");
+						System.out.print("\n수정할 수치를 입력하세요(숫자만 입력) : ");
+						int feel = sc.nextInt();
+						System.out.println("\n"+y+". " + Action.get(y-1).getAction() + " 의 '" + Action.get(y-1).getFeel()+"' 에서 '"+feel+"' (으)로 변경되었다.");
+						Action.get(y-1).setFeel(feel);
+						break;
+						
+					case 5 :
+						System.out.println("\n===행동설명문구 수정===");
+						System.out.print("\n수정할 문구를 입력하세요 : ");
+						String explanation = sc.next();
+						System.out.println("\n"+y+". " + Action.get(y-1).getAction() + " 의 '" + Action.get(y-1).getExplanation()+"' 에서 '"+explanation+"' (으)로 변경되었다.");
+						Action.get(y-1).setExplanation(explanation);
+						break;
+						
+					case 0 : System.out.println("\n종료합니다\n"); break;
+					default : System.out.println("\n메뉴에 있는 번호만 선택하세요\n"); break;
+					}
+				}
+				System.out.println("\n==================================================================================");
+				System.out.println("======================================== 4번 실행종료 ============================");
+				System.out.println("==================================================================================\n");
+				
+				
 	}
 	
 	public void method5() throws Exception{
+		
+		System.out.print("입력:");
+		int know = sc.nextInt();
+		int c =0;
+		
+		for(int i=0; i<10; i++) {
+		c++;
+		if(know == c)
+		{System.out.println(c+"찾음");
+			break;
+	
+		}}
+		
+		
+		
+	int i = 0;
+	int feel = sc.nextInt();
+	
+		for(Model find : Action) {
+			i++;
+			if(feel == i)
+			{System.out.println("찾음");
+			System.out.println(find);
+			}
+		}
+	
+	
+	
+	
 	}
+		
+	
+
+		
+	
 	
 	
 	
