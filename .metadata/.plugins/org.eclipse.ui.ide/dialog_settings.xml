@@ -6,6 +6,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\workspace\02_Java\14_Network_Client"/>
 			<item value="C:\workspace\02_Java\07_ObjectArray_Homework_조미현"/>
 			<item value="C:\workspace\02_Java\08_inheritance\src"/>
 			<item value="C:\workspace\02_Java\08_Inheritance"/>
@@ -14,7 +15,7 @@
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="68"/>
-			<item key="DIALOG_Y_ORIGIN" value="0"/>
+			<item key="DIALOG_Y_ORIGIN" value="8"/>
 			<item key="DIALOG_WIDTH" value="888"/>
 			<item key="DIALOG_HEIGHT" value="629"/>
 			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

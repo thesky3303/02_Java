@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="equ"/>
+		<item key="selection" value="clientSocket"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="clientSocket"/>
+			<item value="Un"/>
+			<item value="un"/>
+			<item value="wri"/>
+			<item value="w"/>
+			<item value="file"/>
+			<item value="port"/>
+			<item value="시험"/>
 			<item value="equ"/>
 			<item value="eq"/>
 			<item value="line"/>
@@ -15,14 +23,6 @@
 			<item value="대문자"/>
 			<item value="BookList"/>
 			<item value="인덱스"/>
-			<item value="temp"/>
-			<item value="feel"/>
-			<item value="fell"/>
-			<item value="sd"/>
-			<item value="name"/>
-			<item value="targ"/>
-			<item value="tar"/>
-			<item value="ran"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Service"/>
